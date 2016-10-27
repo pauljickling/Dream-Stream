@@ -1,0 +1,33 @@
+{
+  "name": "dreamstream",
+  "version": "1.0.0",
+  "description": "A Node.js web app that lists the highest MMR Dota streamers on twitch.tv",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "require": "^2.4.20",
+    "request": "^2.75.0",
+    "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauljickling/Dream-Stream.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "Twitch",
+    "Dota"
+  ],
+  "author": "Paul Jickling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pauljickling/Dream-Stream/issues"
+  },
+  "homepage": "https://github.com/pauljickling/Dream-Stream#readme"
+}
