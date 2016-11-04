@@ -103,7 +103,7 @@ function nameSwitch() {
       break;
       case "Miracle_doto": streamers[x] = "Miracle-RyOuta";
       break;
-      case "MiSeRyTHESLAYER": streamers[x] = "MiSeRy";
+      case "MiSeRyTheSLAYER": streamers[x] = "MiSeRy";
       break;
       case "MooDota2": streamers[x] = "Moo";
       break;
