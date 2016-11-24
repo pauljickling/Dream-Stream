@@ -10,7 +10,7 @@ var se_asia = require("./public/se_asia.json");
 var login = {
   url: "https://api.twitch.tv/kraken/streams?limit=100&offset=0&game=DOTA+2",
   headers: {
-    "Client-ID": // Client ID goes here
+    "Client-ID": "krywenagrwonl3yztwdbl5agpbwgu8y"
   }
 };
 
@@ -71,11 +71,13 @@ function nameSwitch() {
       break;
       case "Attackerdota": streamers[x] = "!Attacker";
       break;
-      case "Arteezy": streamers[x] = "rtz";
+      case "Arteezy": streamers[x] = "Arteezy";
       break;
       case "BananaSlamJamma": streamers[x] = "BSJ";
       break;
-      case "blackdotatv": streamers[x] = "Black^";
+      case "BlackDotATV": streamers[x] = "Black^";
+      break;
+      case "BlitzDotA": streamers[x] = "Blitz";
       break;
       case "BloodyNine_": streamers[x] = "Bloody Nine";
       break;
@@ -85,7 +87,9 @@ function nameSwitch() {
       break;
       case "Cr1tdota": streamers[x] = "Cr1t-";
       break;
-      case "EternalEnVyy": streamers[x] = "EternalEnvy";
+      case "DotACapitalist": streamers[x] = "Capitalist";
+      break;
+      case "EternaLEnVyy": streamers[x] = "EternalEnVy";
       break;
       case "forev": streamers[x] = "Forev";
       break;
