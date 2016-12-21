@@ -33,14 +33,6 @@ there are undoubtedly missed exceptions. Please suggest a change to the
 nameSwitch function in the collectdata.js file (starts at line 56), or
 contact the author so this can be corrected.
 
-### Q:
-
-Is there any way to filter players by language?
-
-### A:
-
-This will be added in a future version.
-
 ## LICENSE
 
 Dream Stream is (c) 2016 Paul Jickling and made available under the MIT license
