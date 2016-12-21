@@ -3,12 +3,12 @@
 <table>
   <tr>
     <td></td>
-    <td><div id="tableName"><strong>Streamer</strong></td>
+    <td><strong>Streamer</strong></td>
     <td><strong>Solo MMR</strong></td>
   </tr>
   <tr>
     <td><div id="logo0"></div></td>
-    <td><div id="player0"></div></td>
+    <td><div id="player0">Loading...</div></td>
     <td><div id="mmr0"></div></td>
   </tr>
   <tr>
@@ -58,9 +58,16 @@
   </tr>
 </table>
 <br>
-<div id="info">Dream Stream is a script written in Node.js that checks the
-  DOTA 2 leaderboards and Twitch.tv's API to see who on the leaderboard is
+<div id="info"><p><label for="language">Select language filter:</label>
+    <select name="language" id="language">
+      <option value="na">None</option>
+      <option value="en">English</option>
+      <option value="ru">Russian</option>
+      <option value="ko">Korean</option>
+    </select></p>
+    <p>Dream Stream is a script written in Node.js that checks the
+  DOTA 2 leaderboards and the Twitch API to see who on the leaderboard is
   currently streaming. Please check <a href="https://github.com/pauljickling/Dream-Stream">
   the Github page</a> for Frequently Asked Questions. Dream Stream updates every
-  five minutes (or you can refresh the page). <br><br><strong>Last updated:</strong> </div><div id="divTime"></div>
+  five minutes (or you can refresh the page).</p> <br><br><strong>Last updated:</strong> </div><div id="divTime"></div>
 <h6 id="license">Dream Stream is (c) 2016 Paul Jickling and made available under the MIT license. Dota 2 is a registered trademark of Valve Corporation.</h6>

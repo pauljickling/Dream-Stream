@@ -15,16 +15,19 @@ function dreamy() {
           sub = "<img src='" + dream[i].logo + "' height='66' width='66'>";
           }
           $("div#logo" + i).html(sub);
+          $("div#logo" + i).addClass(dream[i].lang);
           $("div#player" + i).html("<a href='" + dream[i].twitchUrl + "'>" + dream[i].name + "</a>");
+          $("div#player" + i).addClass(dream[i].lang);
           $("div#mmr" + i).html(dream[i].mmr);
+          $("div#mmr" + i).addClass(dream[i].lang);
       }
     }
-  })  ;
+  });
 }
 
 setTimeout(function() {
   dreamy();
-}, 1000);
+}, 500);
 
 
 setInterval(function() {

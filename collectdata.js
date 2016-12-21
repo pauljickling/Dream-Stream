@@ -10,7 +10,7 @@ var se_asia = require("./public/se_asia.json");
 var login = {
   url: "https://api.twitch.tv/kraken/streams?limit=100&offset=0&game=DOTA+2",
   headers: {
-    "Client-ID": // Client ID goes here
+    "Client-ID": // client id goes here
   }
 };
 
@@ -20,7 +20,8 @@ function arrToObject(output, input1, input2) {
     output[i] = {name: input1[i],
                 mmr: input2[i],
                 twitchUrl: null,
-                logo: null};
+                logo: null,
+                lang: null};
   }
 }
 // after the array has been filtered this removes any empty values from the array
@@ -51,13 +52,14 @@ function getName(region) {
     totalPlayers.push(region.leaderboard[i].name);
   }
 }
-// adds the twitchUrl and logo values to the master list array
+// adds the twitchUrl, logo, and language values to the master list array
 function getTwitchUrl() {
   for (var x=0; x < filteredPlayers.length; x++) {
     var y = totalPlayers.indexOf(filteredPlayers[x]);
     var z = streamers.indexOf(filteredPlayers[x]);
     masterList[y].twitchUrl = twitchUrls[z];
     masterList[y].logo = logos[z];
+    masterList[y].lang = lang[z];
   }
 }
 // some players have different twitch and DOTA 2 handles. This is a manual remedy.
@@ -141,6 +143,7 @@ var filteredPlayers = []; // array  with the name of streamers on the DOTA 2 lea
 var twitchUrls = []; // array of twitchurls from Twitch JSON request
 var complete = []; // array of the filteredPlayers list with all the relevant data from the masterList
 var logos = []; // array of logos from Twitch JSON request
+var lang = []; // array of broadcaster languages from Twitch JSON request
 
 getName(americas);
 getName(china);
@@ -166,6 +169,7 @@ request(login, function(error, response, body) {
       streamers.push(live.streams[i].channel.display_name);
       twitchUrls.push(live.streams[i].channel.url);
       logos.push(live.streams[i].channel.logo);
+      lang.push(live.streams[i].channel.broadcaster_language);
     }
     nameSwitch();
     for (var n=0; n < streamers.length; n++) {
