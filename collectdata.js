@@ -95,6 +95,8 @@ function nameSwitch() {
       break;
       case "EternaLEnVyy": streamers[x] = "EternaLEnVy";
       break;
+      case "FearDarkness": streamers[x] = "Fear";
+      break;
       case "forev": streamers[x] = "Forev";
       break;
       case "fozzy4444": streamers[x] = "tv/fozzy4444";
