@@ -1,0 +1,48 @@
+a {
+  text-decoration: none;}
+a:link {
+  color: #7db0e0;}
+a:visited {
+  color: #d597e5;}
+a:hover {
+  text-decoration: underline;}
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: sans-serif;
+  font-size: 100%;
+  color: #FFF;}
+h1 {
+  font-size: 2em;
+  text-align: center;}
+p {
+  font-size: 1em;
+  text-align: left;}
+table {
+  margin: auto;
+  border: .5px solid #666;
+  padding: 10px;}
+td {
+  text-align: left;
+  padding: 0.5em;}
+@media only screen and (min-width: 980px) {
+  #divTime,#info,h6#license {
+    width: 33%;
+  }
+}
+#divTime {
+  margin: auto;
+  padding: .5em}
+#error {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 1em;}
+#info {
+  margin: auto;}
+#lang {
+  text-align: center;
+  padding-bottom: 1em;
+}
+h6#license {
+  margin: auto;
+  padding-top: 1em;}
