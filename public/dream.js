@@ -2,8 +2,11 @@ function dreamy() {
   $.getJSON("dreamstream.json").done(function (data) {
     var dream = data;
     var sub;
-    var dreamTime = new Date();
-    $("div#divTime").html(dreamTime);
+    var update = new Date();
+    var h = update.getHours();
+    var m = update.getMinutes();
+    var dreamTime = " " + h + ":" + m;
+    $("span#divTime").html(dreamTime);
     console.log(dream);
     if (dream.length === 0) {
       $("div#jsonNull").html("<div id='error'>No leaderboard players found!</div>");
