@@ -63,6 +63,7 @@ function getTwitchUrl() {
   }
 }
 // some players have different twitch and DOTA 2 handles. This is a manual remedy.
+// Twitch name --> Steam name
 function nameSwitch() {
   for (var x=0; x < streamers.length; x++) {
     var name = streamers[x];
@@ -96,6 +97,8 @@ function nameSwitch() {
       case "EternaLEnVyy": streamers[x] = "EternaLEnVy";
       break;
       case "FearDarkness": streamers[x] = "Fear";
+      break;
+      case "febbydoto": streamers[x] = "Febby-";
       break;
       case "forev": streamers[x] = "Forev";
       break;
