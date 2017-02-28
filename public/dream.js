@@ -3,10 +3,7 @@ function dreamy() {
     var dream = data;
     var sub;
     var update = new Date();
-    var h = update.getHours();
-    var m = update.getMinutes();
-    var dreamTime = " " + h + ":" + m;
-    $("span#divTime").html(dreamTime);
+    $("span#divTime").html(update.toLocaleTimeString());
     console.log(dream);
     if (dream.length === 0) {
       $("div#jsonNull").html("<div id='error'>No leaderboard players found!</div>");
