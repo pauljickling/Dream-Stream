@@ -31,18 +31,24 @@ table {
 td {
   text-align: left;
   padding: 0.5em;}
-  /*
-@media only screen and (min-width: 980px) {
-  #divTime,#info,h6#license {
-    width: 33%;
-  }
-}
-*/
 
 .wrapper {
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
+}
+
+#about {
+  cursor: pointer;
+  color: #7db0e0;
+}
+
+#about:visited {
+  color: #d597e5;
+}
+
+#about:hover {
+  text-decoration: underline;
 }
 
 #divTime {
