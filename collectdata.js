@@ -84,6 +84,8 @@ function nameSwitch() {
       break;
       case "BloodyNine_": streamers[x] = "Bloody Nine";
       break;
+      case "bryle_": streamers[x] = "Bryle";
+      break;
       case "canceldota": streamers[x] = "canceL^^";
       break;
       case "CCnCDotA2": streamers[x] = "CCnC";
