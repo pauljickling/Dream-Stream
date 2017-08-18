@@ -124,6 +124,8 @@ function nameSwitch() {
       break;
       case "Moonmeander": streamers[x] = "MoonMayMays";
       break;
+      case "shuma4": streamers[x] = "ShuMa";
+      break;
       case "Sing_sing": streamers[x] = "SingSing";
       break;
       case "slahserDota": streamers[x] = "slahser";
