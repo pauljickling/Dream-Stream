@@ -140,6 +140,8 @@ function nameSwitch() {
       break;
       case "WagamamaTV": streamers[x] = "Wagamama";
       break;
+      case "YapzOrdota": streamers[x] = "YapzOr";
+      break;
       default: name = streamers[x];
       break;
     }
