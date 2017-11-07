@@ -2,15 +2,9 @@ var express = require("express");
 var fs = require("fs");
 var request = require("request");
 var collectdata = require("./collectdata.js");
-var americas = require("./americas.js");
-var china = require("./china.js");
-var europe = require("./europe.js");
-var se_asia = require("./se_asia.js");
+const getJson = require('./getjson.js');
 
-americas();
-china();
-europe();
-se_asia();
+getJson();
 
 var app = express();
 

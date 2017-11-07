@@ -1,2 +1,6 @@
 /node_modules
-
+test.js
+/public/americas.json
+/public/europe.json
+/public/china.json
+/public/se_asia.json
