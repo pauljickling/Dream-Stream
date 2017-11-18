@@ -74,8 +74,6 @@ function nameSwitch() {
       break;
       case "Attackerdota": streamers[x] = "!Attacker";
       break;
-      case "Arteezy": streamers[x] = "Arteezy";
-      break;
       case "BananaSlamJamma": streamers[x] = "BSJ";
       break;
       case "BlackDotATV": streamers[x] = "Black^";
@@ -123,6 +121,8 @@ function nameSwitch() {
       case "MooDota2": streamers[x] = "Moo";
       break;
       case "Moonmeander": streamers[x] = "MoonMayMays";
+      break;
+      case "ramzesdoto": streamers[x] = "RAMZES666";
       break;
       case "shuma4": streamers[x] = "ShuMa";
       break;
