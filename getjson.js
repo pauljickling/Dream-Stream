@@ -8,7 +8,6 @@ module.exports = function() {
 
     request(url).pipe(destination);
   }
-
   getJson('americas');
   getJson('china');
   getJson('europe');

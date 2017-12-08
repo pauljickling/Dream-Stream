@@ -6,11 +6,12 @@ var americas = require("./public/americas.json");
 var china = require("./public/china.json");
 var europe = require("./public/europe.json");
 var se_asia = require("./public/se_asia.json");
+var clientid = require("./clientid.js");
 
 var login = {
   url: "https://api.twitch.tv/kraken/streams?limit=100&offset=0&game=DOTA+2",
   headers: {
-    "Client-ID": // client id goes here
+    "Client-ID": clientid.clientId
   }
 };
 
