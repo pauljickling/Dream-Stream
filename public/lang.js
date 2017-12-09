@@ -1,3 +1,5 @@
+// deprecated
+
 $("select").change(function() {
   var lang = $("select").val();
   switch(lang) {

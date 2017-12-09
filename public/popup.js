@@ -1,3 +1,5 @@
+// deprecated
+
 var scrollTop = "";
 var newHeight = "100";
 

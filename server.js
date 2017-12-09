@@ -2,12 +2,11 @@ const express = require("express");
 const getJson = require('./getjson.js');
 const scrape = require('./scrape.js');
 const getStreamers = require('./getstreamers.js');
-const helper = require('./helper.js');
 const bodyParser = require('body-parser');
-const testJson = require('./public/test.json');
-const fs = require('fs');
-// fake json data for testing purposes
-// const fake = require('./public/fake.json');
+const cards = require('./public/cards.json');
+
+getJson();
+scrape();
 
 const app = express();
 
@@ -27,6 +26,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+/* I forget what I was using this for to be honest
 app.use(function(req,res,next){
   var _send = res.send;
   var sent = false;
@@ -37,50 +37,23 @@ app.use(function(req,res,next){
 };
   next();
 });
-
-/* do i even want this?
+*/
 app.use(function (req, res, next) {
+  getStreamers();
   setInterval(function() {
     getStreamers();
-    helper();
   }, 300000);
   setInterval(function() {
     getJson();
   }, 1500000);
   next();
 });
-*/
 app.get("/", function(req, res) {
   res.render("home");
 });
 
 app.get("/test", function(req, res) {
   res.render("test");
-});
-// API GET Request that writes JSON file to current state
-app.get('/api', function(req, res) {
-  res.json(testJson);
-  fs.writeFile('./public/test.json', JSON.stringify(testJson), 'UTF-8', (err) => {
-    if (err) throw err;
-  });
-});
-
-// API PUT Request Updates JSON with current data
-app.put('/api/', function(req, res) {
-  console.log(res.body);
-// let update = whatever the file passes to the Request
-/*
-  let testObject = {
-    rank: 1,
-    name: "Paul",
-    solo_mmr: 10013,
-    points: 2750,
-    isStreaming: false,
-    url: "pauljickling.com",
-    img: "not a string",
-    lang: "it"
-  };
-  res.send(testJson.leaderboard[1] = testObject);*/
 });
 
 // custom 404 page

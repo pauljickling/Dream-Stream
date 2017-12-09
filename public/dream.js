@@ -1,3 +1,5 @@
+// deprecated
+
 function dreamy() {
   $.getJSON("dreamstream.json").done(function (data) {
     var dream = data;

@@ -1,14 +1,17 @@
 module.exports = function() {
   const fs = require('fs');
   const request = require('request');
+  const getJson = require('./getjson.js');
+  const scrape = require('./scrape.js');
+  const clientid = require('./clientid.js');
 
+  const points = require('./public/points.json');
   const americas = require('./public/americas.json');
   const china = require('./public/china.json');
   const europe = require('./public/europe.json');
   const se_asia = require('./public/se_asia.json');
-  const points = require('./public/points.json');
-  const clientid = require('./clientid.js');
 
+  // twitch api login
   const login = {
     url: 'https://api.twitch.tv/kraken/streams?limit=100&offset=0&game=DOTA+2',
     headers: {
@@ -16,8 +19,9 @@ module.exports = function() {
     }
   };
 
+  // need to add cards text to streamer class
   class Streamer {
-    constructor(name, rank, mmr, points, url, img, lang) {
+    constructor(name, rank, mmr, points, url, img, lang, card) {
       this.name = name;
       this.rank = rank;
       this.mmr = mmr;
@@ -25,6 +29,7 @@ module.exports = function() {
       this.url = url;
       this.img = img;
       this.lang = lang;
+      this.card = card;
     }
   }
 
@@ -34,12 +39,12 @@ module.exports = function() {
     for (let i=0; i < region.leaderboard.length; i++) {
       let streamer = new Streamer(region.leaderboard[i].name, i+1, region.leaderboard[i].solo_mmr);
       streamers.push(streamer);
+      }
     }
-  }
 
   getRegion(americas);
-  getRegion(europe);
   getRegion(china);
+  getRegion(europe);
   getRegion(se_asia);
 
   let playerMap = new Map(); // player map where the value is the index of the players
@@ -64,8 +69,8 @@ module.exports = function() {
 
   let filteredPlayers = []; // streamers list reduced to
   let twitch = [];  // list from Twitch JSON request
+  let cards = '';
   // Twitch API call
-
   request(login, function(error, response, body) {
   // nomenclature is a little weird. what does filterList mean vs reduceList?
     function filterList(arr) {
@@ -77,7 +82,29 @@ module.exports = function() {
         }
       }
       reduceList(streamers);
+  //    console.log(filteredPlayers[0].name);
+      for (let p in filteredPlayers) {
+        if (filteredPlayers[p].rank === undefined) {
+          filteredPlayers[p].rank = 0;
+        }
+        if (filteredPlayers[p].points === undefined) {
+          filteredPlayers[p].points = 0;
+        }
+        filteredPlayers[p].card = `<a href="${filteredPlayers[p].url}" class="${filteredPlayers[p].lang}"><div class="card"><img src="${filteredPlayers[p].img}">
+                                        <p>${filteredPlayers[p].name}<br>
+                                        Rank<span class="rank">${filteredPlayers[p].rank}</span><br>
+                                        <span class="pointsRank">${filteredPlayers[p].points}</span> Qualifying Points</p>
+                                        </div></a>\n`;
+      }
       fs.writeFile('./public/dreamstream.json', JSON.stringify(filteredPlayers), 'UTF-8', (err) => {
+        if (err) throw err;
+      });
+      for (let c in filteredPlayers) {
+        cards = cards + filteredPlayers[c].card;
+      }
+      let cardsJson = { text: cards };
+
+      fs.writeFile('./public/cards.json', JSON.stringify(cardsJson), 'UTF-8', (err) => {
         if (err) throw err;
       });
     }
@@ -189,5 +216,4 @@ module.exports = function() {
       }
     }
   }
-
 }
