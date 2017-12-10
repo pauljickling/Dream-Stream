@@ -1,8 +1,3 @@
-/*
- running into sort error covered in this article:
- https://alistapart.com/article/what-i-talk-about-when-i-talk-about-sorting
-*/
-
 class Sorter {
   constructor(selection, rank, points) {
     this.selection = selection;
