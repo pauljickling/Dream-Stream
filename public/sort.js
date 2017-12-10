@@ -16,18 +16,13 @@ rank.addEventListener('click', function() {
     let n = i+1;
     let selection = document.querySelector(`.container > a:nth-child(${n})`); //selects appropriate card
     let sorter = new Sorter(selection, rankSelector.item(i).textContent, null);
+    console.log(rankList);
     rankList.push(sorter);
   }
 
-  rankList.sort(function(a, b) {
-    if (a.rank < b.rank) {
-      return -1;
-    }
-    if (a.rank > b.rank) {
-      return 1;
-    }
-    return 0;
-  });
+  rankList.sort((a, b) => a - b);
+  rankList.reverse();
+  console.log(rankList);
 
   let parentDiv = rankList[0].selection.parentNode;
 
@@ -54,16 +49,8 @@ points.addEventListener('click', function() {
     pointsList.push(sorter);
   }
 
-  pointsList.sort(function(a, b) {
-    if (a.points > b.points) {
-      return -1;
-    }
-    if (a.points < b.points) {
-      return 1;
-    }
-    return 0;
-  });
-
+  pointsList.sort((a, b) => a - b);
+  console.log(pointsList);
   let parentDiv = pointsList[0].selection.parentNode;
 
   for (let x = pointsList.length; x > 1; x--) {

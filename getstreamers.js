@@ -92,7 +92,7 @@ module.exports = function() {
         }
         filteredPlayers[p].card = `<a href="${filteredPlayers[p].url}" class="${filteredPlayers[p].lang}"><div class="card"><img src="${filteredPlayers[p].img}">
                                         <p>${filteredPlayers[p].name}<br>
-                                        Rank<span class="rank">${filteredPlayers[p].rank}</span><br>
+                                        Rank <span class="rank">${filteredPlayers[p].rank}</span><br>
                                         <span class="pointsRank">${filteredPlayers[p].points}</span> Qualifying Points</p>
                                         </div></a>\n`;
       }

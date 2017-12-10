@@ -26,18 +26,6 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-/* I forget what I was using this for to be honest
-app.use(function(req,res,next){
-  var _send = res.send;
-  var sent = false;
-  res.send = function(data){
-    if(sent) return;
-    _send.bind(res)(data);
-    sent = true;
-};
-  next();
-});
-*/
 app.use(function (req, res, next) {
   getStreamers();
   setInterval(function() {
