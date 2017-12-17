@@ -1,4 +1,17 @@
-// deprecated
+let lang = document.querySelector('li.nav-item-dropdown');
+let list = document.querySelectorAll('.lang-dropdown');
+
+
+lang.addEventListener('click', function() {
+  for (index of list) {
+    console.log(list.item(index));
+    list.item(index).style.visibility = 'visible';
+  }
+  //list.style.visibility = 'visible';
+  //fadeIn(list);
+});
+
+/* deprecated
 
 $("select").change(function() {
   var lang = $("select").val();
@@ -21,3 +34,4 @@ $("select").change(function() {
     break;
   }
 });
+*/

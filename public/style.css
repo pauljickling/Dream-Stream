@@ -51,7 +51,6 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
 }
 .card {
-
   padding: 10px;
 }
 .navbar {
@@ -69,6 +68,11 @@ p {
   padding-left: 10px;
   padding-right: 10px;
 }
+.lang-dropdown {
+  list-style:none;
+  visibility: hidden;
+}
+
 /* should consider an auto display bottom */
 #license {
   margin: 0 auto;
