@@ -7,13 +7,7 @@
 a {
   text-decoration: none;
   color: white;
-} /*
-a:link {
-  color: #7db0e0;
-}
-a:visited {
-  color: #d597e5;
-} */
+} 
 a:hover {
   text-decoration: underline;
 }
@@ -31,10 +25,6 @@ h2 {
 img {
   width: 100%;
   border: 1px solid #d3d3d3;
-}
-
-li.nav-item {
-  /* open question of how to stylize nav items */
 }
 
 li.nav-item:hover {

@@ -19,7 +19,7 @@ module.exports = function() {
     }
   };
 
-  // need to add cards text to streamer class
+
   class Streamer {
     constructor(name, rank, mmr, points, url, img, lang, card) {
       this.name = name;
@@ -82,7 +82,6 @@ module.exports = function() {
         }
       }
       reduceList(streamers);
-  //    console.log(filteredPlayers[0].name);
       for (let p in filteredPlayers) {
         if (filteredPlayers[p].rank === undefined) {
           filteredPlayers[p].rank = 0;
