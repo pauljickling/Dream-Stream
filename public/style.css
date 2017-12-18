@@ -32,6 +32,11 @@ img {
   width: 100%;
   border: 1px solid #d3d3d3;
 }
+
+li.nav-item {
+  /* open question of how to stylize nav items */
+}
+
 li.nav-item:hover {
   text-decoration: underline;
 }
@@ -73,12 +78,12 @@ p {
   visibility: hidden;
 }
 
-/* should consider an auto display bottom */
 #license {
   margin: 0 auto;
-  padding-top: 1em;
+  padding-top: 5em;
   text-align: right;
-  max-width: 350px;}
+  max-width: 350px;
+}
 
 #about-text {
   background-color: white;

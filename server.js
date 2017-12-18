@@ -2,8 +2,6 @@ const express = require("express");
 const getJson = require('./getjson.js');
 const scrape = require('./scrape.js');
 const getStreamers = require('./getstreamers.js');
-const bodyParser = require('body-parser');
-const cards = require('./public/cards.json');
 
 getJson();
 scrape();
@@ -12,9 +10,6 @@ const app = express();
 
 const handlebars = require("express-handlebars").create({
     defaultLayout:"main",
-    helpers: {
-      streamers: function() { return cards.text }
-    }
   });
 app.engine("handlebars", handlebars.engine);
 app.set("view engine", "handlebars");
@@ -22,9 +17,6 @@ app.set("view engine", "handlebars");
 app.set("port", process.env.PORT || 3000);
 
 app.use(express.static(__dirname + "/public"));
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 
 app.use(function (req, res, next) {
   getStreamers();
@@ -37,13 +29,7 @@ app.use(function (req, res, next) {
   next();
 });
 app.get("/", function(req, res) {
-  getStreamers();
   res.render("home");
-});
-
-app.get("/test", function(req, res) {
-  getStreamers();
-  res.render("test");
 });
 
 // custom 404 page

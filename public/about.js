@@ -1,5 +1,3 @@
-// see https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener
-
 let about = document.querySelector('li#about');
 let aboutText = document.querySelector('#about-text');
 let hideText = document.querySelector('span#close-about');
