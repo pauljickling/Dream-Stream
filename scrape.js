@@ -8,8 +8,6 @@ const fs = require('fs');
   const page = await browser.newPage();
   await page.goto('http://www.dota2.com/procircuit');
 
-// to see how the NodeList object works see https://developer.mozilla.org/en-US/docs/Web/API/NodeList
-
   class Player {
     constructor(name, points) {
       this.name = name;
