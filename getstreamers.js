@@ -89,7 +89,7 @@ module.exports = function() {
         if (filteredPlayers[p].points === undefined) {
           filteredPlayers[p].points = 0;
         }
-        filteredPlayers[p].card = `<a href="${filteredPlayers[p].url}" class="${filteredPlayers[p].lang}"><div class="card"><img src="${filteredPlayers[p].img}">
+        filteredPlayers[p].card = `<a href="${filteredPlayers[p].url}" class="${filteredPlayers[p].lang}"><div class="card"><img src="${filteredPlayers[p].img}" aria-label="logo for ${filteredPlayers[p].name}">
                                         <p>${filteredPlayers[p].name}<br>
                                         Rank <span class="rank">${filteredPlayers[p].rank}</span><br>
                                         <span class="pointsRank">${filteredPlayers[p].points}</span> Qualifying Points</p>
