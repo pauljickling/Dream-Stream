@@ -4,7 +4,7 @@ Dream Stream is a script developed using Express and Node.js that checks the
 DOTA 2 leaderboards and the Twitch API to determine the highest MMR players
 currently streaming at any given moment.
 
-Afgter installing the dependencies, from the command prompt run the server.js
+After installing the dependencies, from the command prompt run the server.js
 file, and then in your web browser go to http://localhost:3000 to see the app in
 action. When running locally you will need to obtain a client-ID from Twitch to
 use their API. Alternatively, you can check out the Heroku deployment at
