@@ -50,6 +50,7 @@ points.addEventListener('click', function() {
   pointsList.sort(function(a, b) {
     return (a.points) - (b.points);
   });
+  pointsList.reverse();
   let parentDiv = pointsList[0].selection.parentNode;
 
   for (let x = pointsList.length; x > 1; x--) {
