@@ -23,7 +23,8 @@ h2 {
   margin-left: 20px;
 }
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border: 1px solid #d3d3d3;
 }
 
@@ -43,7 +44,7 @@ p {
   margin-left: 25%;
   margin-right: 25%;
   grid-gap: 40px;
-  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
 }
 .card {
   padding: 10px;
