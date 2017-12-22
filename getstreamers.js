@@ -134,6 +134,8 @@ module.exports = function() {
     for (let i=0; i < twitch.length; i++) {
       let name = twitch[i].name;
       switch(name) {
+        case "7ckngMad": twitch[i].name = "7Mad-";
+        break;
         case "ABFnggshka": twitch[i].name = "Fng";
         break;
         case "ALOHADANCETV": twitch[i].name = "ALOHADANCE";
@@ -174,6 +176,8 @@ module.exports = function() {
         break;
         case "GGwpLanaya": twitch[i].name = "GGwpLanaya Ift";
         break;
+        case "Gorgcc": twitch[i].name = "Gorgc";
+        break;
         case "Illidanstrdoto": twitch[i].name = "Illidan";
         break;
         case "inK_Dota": twitch[i].name = "@inKDota";
@@ -190,6 +194,8 @@ module.exports = function() {
         break;
         case "Moonmeander": twitch[i].name = "MoonMayMays";
         break;
+        case "qSnake": twitch[i].name = " ุqSnake";
+        break;
         case "ramzesdoto": twitch[i].name = "RAMZES666";
         break;
         case "shuma4": twitch[i].name = "ShuMa";
@@ -198,11 +204,17 @@ module.exports = function() {
         break;
         case "slahserDota": twitch[i].name = "slahser";
         break;
+        case "smashdota": twitch[i].name = "SmAsH";
+        break;
+        case "SneykingDota": twitch[i].name = "Sneyking";
+        break;
         case "SumaiLDoto": twitch[i].name = "SumaiL";
         break;
         case "Sovereigndota": twitch[i].name = "Sovereign";
         break;
         case "universedota": twitch[i].name = "Universe";
+        break;
+        case "vanNDota": twitch[i].name = "vanN";
         break;
         case "w33haa": twitch[i].name = "w33";
         break;
