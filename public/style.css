@@ -32,7 +32,7 @@ li.nav-item:hover {
   text-decoration: underline;
 }
 p {
-  font-size: 1em;
+  font-size: .9em;
   text-align: left;
   line-height: 1.5;
 }
@@ -51,7 +51,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* need to set breakpoints */
   margin-left: 5px;
   margin-right: 5px;
   background-color: #37474f;
@@ -59,6 +58,7 @@ p {
 }
 
 .nav-item {
+  display: flex;
   flex: 1 0 50px;
   max-width: 250px;
   margin: 10px;
@@ -87,7 +87,7 @@ p {
   background-color: white;
   color: black;
   border: 5px solid black;
-  position: absolute;
+  position: fixed;
   margin-left: 45%;
   margin-right: 45%;
   padding: 20px;
@@ -109,6 +109,9 @@ span#close-about {
 }
 
 @media screen and (min-width: 620px) {
+  p {
+    font-size: 1em;
+  }
   .navbar {
     margin-left: 25%;
     margin-right: 25%;
