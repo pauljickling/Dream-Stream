@@ -1,4 +1,4 @@
-let about = document.querySelector('li#about');
+let about = document.querySelector('#about');
 let aboutText = document.querySelector('#about-text');
 let hideText = document.querySelector('span#close-about');
 
