@@ -28,7 +28,7 @@ img {
   border: 1px solid #d3d3d3;
 }
 p {
-  font-size: .8em;
+  font-size: 1em;
   text-align: left;
   line-height: 1.5;
 }
@@ -87,7 +87,7 @@ vertical-align: middle;
 .player-title {
   font-size: 1.2em;
 }
-#license {
+#lower {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -95,10 +95,13 @@ vertical-align: middle;
   align-items: flex-end;
   margin-left: minmax(300px, 75%);
   margin-right: 10px;
-  padding-top: 5em;
+}
+#license {
+  margin-left: 10px;
 }
 #about:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 #about-text {
   background-color: gray;
@@ -115,15 +118,13 @@ vertical-align: middle;
 span#close-about {
   float: right;
   padding-left: 10px;
+  cursor: pointer;
 }
 #time {
   margin-left: 20px;
 }
 
 @media screen and (min-width: 620px) {
-  p {
-    font-size: 1em;
-  }
   .navbar {
     margin-left: 25%;
     margin-right: 25%;
