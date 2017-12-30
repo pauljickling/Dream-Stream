@@ -8,7 +8,7 @@ class Sorter {
 
 let rank = document.querySelector('button#rank');
 
-rank.addEventListener('click', function() {
+rank.addEventListener('click' || 'touchstart', function() {
   let rankList = [];
   let rankSelector = document.querySelectorAll('span.rank');
 
@@ -36,7 +36,7 @@ its sibling element in the document */
 
 let points = document.querySelector('button#points');
 
-points.addEventListener('click', function() {
+points.addEventListener('click' || 'touchstart', function() {
   let pointsList = [];
   let pointsSelector = document.querySelectorAll('span.pointsRank');
 

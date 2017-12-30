@@ -3,7 +3,7 @@ let aboutText = document.querySelector('#about-text');
 let hideText = document.querySelector('span#close-about');
 
 function showText() {
-  about.addEventListener('click', function() {
+  about.addEventListener('click' || 'touchstart', function() {
     aboutText.style.visibility = 'visible';
     fadeIn(aboutText);
   });
@@ -28,7 +28,7 @@ function fadeIn(el) {
 }
 
 function hideAbout() {
-  hideText.addEventListener('click', function() {
+  hideText.addEventListener('click' || 'touchstart', function() {
     aboutText.style.visibility = 'hidden';
   });
 }
