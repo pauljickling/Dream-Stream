@@ -53,6 +53,7 @@ font-size: 1em;
 color: white;
 text-decoration: none;
 vertical-align: middle;
+cursor: pointer;
 }
 .button:hover {
    border-top-color: #587385;
@@ -99,9 +100,11 @@ vertical-align: middle;
 #license {
   margin-left: 10px;
 }
+#about {
+  cursor: pointer;
+}
 #about:hover {
   text-decoration: underline;
-  cursor: pointer;
 }
 #about-text {
   background-color: gray;
