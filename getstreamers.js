@@ -95,6 +95,9 @@ module.exports = function() {
                                         <span class="pointsRank">${filteredPlayers[p].points}</span> Qualifying Points</p>
                                         </div></a>\n`;
       }
+      filteredPlayers.sort(function(a, b) {
+        return (a.rank) - (b.rank);
+      });
       fs.writeFile('./public/dreamstream.json', JSON.stringify(filteredPlayers), 'UTF-8', (err) => {
         if (err) throw err;
       });

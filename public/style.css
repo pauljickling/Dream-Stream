@@ -20,17 +20,22 @@ body {
 }
 h2 {
   font-size: 1.5em;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 img {
   max-width: 100%;
   height: auto;
   border: 1px solid #d3d3d3;
 }
+
+img#github-logo {
+  border: none;
+}
 p {
   font-size: 1em;
   text-align: left;
   line-height: 1.5;
+  margin-left: 10px;
 }
 .button {
 border-top: 1px solid #6d6e6e;
@@ -70,6 +75,7 @@ cursor: pointer;
   margin-right: 25%;
   grid-gap: 40px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  border-bottom: 5px solid #32566e;
 }
 .card {
   padding: 10px;
@@ -91,57 +97,30 @@ cursor: pointer;
 }
 #lower {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-self: flex-end;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-left: minmax(300px, 75%);
   margin-right: 10px;
 }
-#license {
-  margin-left: 10px;
-}
-#about {
-  cursor: pointer;
-}
-#about:hover {
-  text-decoration: underline;
-}
-/* set media query so that about-text is just displayed at the bottom of the page */
-#about-text {
-  background-color: gray;
-  border: 5px solid black;
-  position: fixed;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-left: 5px;
-  min-width: 280px;
-  top: 25px;
-  font-size: 1.1em;
-  visibility: hidden;
-}
-span#close-about {
-  float: right;
-  padding-left: 10px;
-  cursor: pointer;
-}
+
 #time {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
-@media screen and (min-width: 620px) {
-  .navbar {
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-  #about-text {
-    margin-left: 45%;
-    margin-right: 45%;
-  }
+#about {
+  font-size: 1.2em;
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 1080px) {
   .navbar {
     visibility: visible;
+  }
+  #license {
+    padding-top: 20px;
+  }
+  #about {
+    padding-left: 20px;
   }
 }
