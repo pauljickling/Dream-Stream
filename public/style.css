@@ -80,6 +80,7 @@ cursor: pointer;
   flex-wrap: wrap;
   align-items: flex-start;
   background-color: #32566e;
+  visibility: hidden;
 }
 .nav-item {
   padding: 2px;
@@ -106,6 +107,7 @@ cursor: pointer;
 #about:hover {
   text-decoration: underline;
 }
+/* set media query so that about-text is just displayed at the bottom of the page */
 #about-text {
   background-color: gray;
   border: 5px solid black;
@@ -135,5 +137,11 @@ span#close-about {
   #about-text {
     margin-left: 45%;
     margin-right: 45%;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .navbar {
+    visibility: visible;
   }
 }
