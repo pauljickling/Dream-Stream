@@ -1,5 +1,5 @@
 function loadJson() {
-  let streamers = document.querySelector('div.container');
+  let streamers = document.querySelector('div#cards');
 
   const request = new XMLHttpRequest();
   request.open('GET', './cards.json', true);
