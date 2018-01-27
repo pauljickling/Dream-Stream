@@ -77,11 +77,10 @@ cursor: pointer;
 }
 .navbar {
   list-style: none;
-  display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   background-color: #32566e;
-  visibility: hidden;
+  display: none;
 }
 
 li.nav-item:first-child {
@@ -114,7 +113,7 @@ li.nav-item:first-child {
 
 @media screen and (min-width: 1080px) {
   .navbar {
-    visibility: visible;
+    display: flex;
   }
   #license {
     padding-top: 20px;
