@@ -58,7 +58,7 @@ module.exports = function() {
       if (playerMap.has(points[i].name) === true) {
         streamers[playerMap.get(points[i].name)].points = points[i].points;
       } else {
-        let streamer = new Streamer(points[i].name, null, points[i].points);
+        let streamer = new Streamer(points[i].name, 'unavilable', null, points[i].points);
         streamers.push(streamer);
         playerMap.set(points[i].name, streamers.length -1);
       }
