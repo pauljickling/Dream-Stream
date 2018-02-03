@@ -181,7 +181,7 @@ module.exports = function() {
         break;
         case "Gorgcc": twitch[i].name = "Gorgc";
         break;
-        case "Illidanstrdoto": twitch[i].name = "Illidan";
+        case "illidanstr": twitch[i].name = "IllidanSTR";
         break;
         case "inK_Dota": twitch[i].name = "@inKDota";
         break;
