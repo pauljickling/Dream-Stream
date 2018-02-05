@@ -2,6 +2,7 @@ const express = require("express");
 const getJson = require('./getjson.js');
 const scrape = require('./scrape.js');
 const getStreamers = require('./getstreamers.js');
+const bodyParser = require('body-parser');
 
 getJson();
 scrape();
@@ -17,6 +18,8 @@ app.set("view engine", "handlebars");
 app.set("port", process.env.PORT || 3000);
 
 app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(function (req, res, next) {
   getStreamers();
@@ -28,8 +31,13 @@ app.use(function (req, res, next) {
   }, 1500000);
   next();
 });
+
 app.get("/", function(req, res) {
   res.render("home");
+});
+
+app.post("/", function(req, res) {
+  console.log('Body: ', req.body);
 });
 
 // custom 404 page

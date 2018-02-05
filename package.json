@@ -4,6 +4,7 @@
   "description": "A Node.js web app that lists the highest ranked Dota streamers on twitch.tv",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
     "puppeteer": "^0.12.0",
