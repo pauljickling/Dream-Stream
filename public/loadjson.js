@@ -18,6 +18,9 @@ function loadJson() {
 }
 
 loadJson();
+setTimeout(function() {
+  loadJson();
+}, 2000);
 setInterval(function() {
   loadJson();
 }, 300000);
