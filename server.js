@@ -36,10 +36,6 @@ app.get("/", function(req, res) {
   res.render("home");
 });
 
-app.post("/", function(req, res) {
-  console.log('Body: ', req.body);
-});
-
 // custom 404 page
 app.use(function(req, res, next) {
   res.status(404);

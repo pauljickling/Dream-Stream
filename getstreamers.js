@@ -33,7 +33,7 @@ module.exports = function() {
     }
   }
 
-  let streamers = []; // list of top tier players, confusingly called streamers
+  let streamers = []; // list of top tier players
 
   function getRegion(region) {
     for (let i=0; i < region.leaderboard.length; i++) {
@@ -67,12 +67,11 @@ module.exports = function() {
 
   getPoints();
 
-  let filteredPlayers = []; // streamers list reduced to
+  let filteredPlayers = []; // when the streamer list is reduced it is pushed to this array
   let twitch = [];  // list from Twitch JSON request
   let cards = '';
   // Twitch API call
   request(login, function(error, response, body) {
-  // nomenclature is a little weird. what does filterList mean vs reduceList?
     function filterList(arr) {
       for (let i=0; i < arr.length; i++) {
         if (playerMap.has(arr[i].name) === true) {

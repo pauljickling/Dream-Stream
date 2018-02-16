@@ -65,11 +65,13 @@ cursor: pointer;
   margin-right: 25%;
   grid-gap: 40px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  border-bottom: 5px solid #32566e;
 }
 #cards {
   margin-top: 40px;
   padding-bottom: 40px;
+}
+#cards.container {
+  border-bottom: 5px solid #32566e;
 }
 #header-container {
   margin-left: 25%;
@@ -98,10 +100,8 @@ li.nav-item:first-child {
 #lower {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+/*  justify-content: center;  */
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
   margin-left: minmax(300px, 75%);
   margin-right: 10px;
 }
