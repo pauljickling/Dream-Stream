@@ -136,6 +136,8 @@ module.exports = function() {
     for (let i=0; i < twitch.length; i++) {
       let name = twitch[i].name;
       switch(name) {
+        case "33dota": twitch[i].name = "33";
+        break;
         case "7ckngMad": twitch[i].name = "7Mad-";
         break;
         case "ABFnggshka": twitch[i].name = "Fng";
@@ -197,6 +199,8 @@ module.exports = function() {
         case "Moonmeander": twitch[i].name = "MoonMayMays";
         break;
         case "PurgeGamers": twitch[i].name = "Purge";
+        break;
+        case "peterpandam": twitch[i].name = "Peterpandam";
         break;
         case "qSnake": twitch[i].name = " ุqSnake";
         break;
