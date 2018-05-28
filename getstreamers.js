@@ -168,6 +168,8 @@ module.exports = function() {
         break;
         case "DotACapitalist": twitch[i].name = "Capitalist";
         break;
+        case "Eosintrash": twitch[i].name = "Eosin";
+        break;
         case "EternaLEnVyy": twitch[i].name = "EternaLEnVy";
         break;
         case "FearDarkness": twitch[i].name = "Fear";
