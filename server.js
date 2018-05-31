@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 getJson();
 scrape();
 
-const week = 604800000;
+const day = 86400000;
 const app = express();
 
 const handlebars = require("express-handlebars").create({
@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
   }, 1500000);
   setInterval(function() {
   scrape();
-}, week);
+}, day);
   next();
 });
 
