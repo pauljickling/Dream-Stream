@@ -27,6 +27,7 @@ img {
 }
 img#github-logo {
   border: none;
+  margin-left: -5px;
   padding-right: 10px;
 }
 p {
@@ -61,8 +62,8 @@ cursor: pointer;
 }
 .container {
   display: grid;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 10px;
+  margin-right: 10px;
   grid-gap: 40px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
@@ -74,8 +75,7 @@ cursor: pointer;
   border-bottom: 5px solid #32566e;
 }
 #header-container {
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 5px;
 }
 .navbar {
   list-style: none;
@@ -100,9 +100,8 @@ li.nav-item:first-child {
 #lower {
   display: flex;
   flex-direction: row;
-/*  justify-content: center;  */
   align-items: center;
-  margin-left: minmax(300px, 75%);
+  margin-left: 10px;
   margin-right: 10px;
 }
 
@@ -114,6 +113,17 @@ li.nav-item:first-child {
 @media screen and (min-width: 1080px) {
   .navbar {
     display: flex;
+  }
+  .container {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  #header-container {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  #lower {
+    margin-left: minmax(300px, 75%);
   }
   #license {
     padding-top: 20px;
