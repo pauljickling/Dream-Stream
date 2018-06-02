@@ -27,8 +27,11 @@ img {
 }
 img#github-logo {
   border: none;
-  margin-left: -5px;
-  padding-right: 10px;
+  padding-right: 5px;
+  -webkit-transform:
+    translateY(0px)
+    translateX(-15px)
+    rotate(0deg);
 }
 p {
   font-size: 1em;
@@ -62,9 +65,9 @@ cursor: pointer;
 }
 .container {
   display: grid;
-  margin-left: 10px;
-  margin-right: 10px;
-  grid-gap: 40px;
+  margin-left: 10%;
+  margin-right: 10%;
+  grid-gap: 5px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 #cards {
@@ -75,7 +78,7 @@ cursor: pointer;
   border-bottom: 5px solid #32566e;
 }
 #header-container {
-  margin-left: 5px;
+  margin-left: 10%;
 }
 .navbar {
   list-style: none;
@@ -103,6 +106,7 @@ li.nav-item:first-child {
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
+  padding-top: 10px;
 }
 
 #about {
@@ -117,6 +121,7 @@ li.nav-item:first-child {
   .container {
     margin-left: 25%;
     margin-right: 25%;
+    grid-gap: 40px;
   }
   #header-container {
     margin-left: 25%;
@@ -124,6 +129,7 @@ li.nav-item:first-child {
   }
   #lower {
     margin-left: minmax(300px, 75%);
+    padding-top: 0px;
   }
   #license {
     padding-top: 20px;
