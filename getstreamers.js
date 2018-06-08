@@ -93,8 +93,7 @@ module.exports = function() {
         }
         filteredPlayers[p].card = `<a href="${filteredPlayers[p].url}" class="${filteredPlayers[p].lang}"><div class="card"><img src="${filteredPlayers[p].img}" aria-label="logo for ${filteredPlayers[p].name}">
                                         <p><div class="player-title">${filteredPlayers[p].name}</div>
-                                        Rank <span class="rank">${filteredPlayers[p].rank}</span><br>
-                                        <span class="pointsRank">${filteredPlayers[p].points}</span> Qualifying Points</p>
+                                        Rank <span class="rank">${filteredPlayers[p].rank}</span></p>
                                         </div></a>\n`;
       }
       filteredPlayers.sort(function(a, b) {
