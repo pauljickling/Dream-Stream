@@ -73,6 +73,9 @@ module.exports = function() {
   // Twitch API call
   request(login, function(error, response, body) {
     function filterList(arr) {
+      fs.writeFile('./public/test_twitch.json', JSON.stringify(arr), 'UTF-8', (err) => {
+        if (err) throw err;
+      });
       for (let i=0; i < arr.length; i++) {
         if (playerMap.has(arr[i].name) === true) {
           streamers[playerMap.get(arr[i].name)].url = arr[i].url;
