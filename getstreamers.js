@@ -2,7 +2,6 @@ module.exports = function() {
   const fs = require('fs');
   const request = require('request');
   const getJson = require('./getjson.js');
-  const scrape = require('./scrape.js');
   const clientid = require('./clientid.js');
 
   const points = require('./public/points.json');

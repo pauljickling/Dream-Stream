@@ -1,11 +1,9 @@
 const express = require("express");
 const getJson = require('./getjson.js');
-const scrape = require('./scrape.js');
 const getStreamers = require('./getstreamers.js');
 const bodyParser = require('body-parser');
 
 getJson();
-scrape();
 
 const day = 86400000;
 const app = express();
@@ -30,9 +28,6 @@ app.use(function (req, res, next) {
   setInterval(function() {
     getJson();
   }, 1500000);
-  setInterval(function() {
-  scrape();
-}, day);
   next();
 });
 
