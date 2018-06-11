@@ -1,6 +1,5 @@
 const express = require("express");
 const getJson = require('./getjson.js');
-const scrape = require('./scrape.js');
 const getStreamers = require('./getstreamers.js');
 const bodyParser = require('body-parser');
 
