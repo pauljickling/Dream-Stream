@@ -234,6 +234,8 @@ module.exports = function() {
         break;
         case "YapzOrdota": twitch[i].name = "YapzOr";
         break;
+        case "ZiftryDoto": twitch[i].name = "Ziftry";
+        break;
         default: name = twitch[i].name;
         break;
       }
