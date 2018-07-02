@@ -166,6 +166,8 @@ module.exports = function() {
         break;
         case "Cr1tdota": twitch[i].name = "Cr1t-";
         break;
+        case "Dota2FATA": twitch[i].name = "Fata";
+        break;
         case "dotademon": twitch[i].name = "DeMoN";
         break;
         case "DotACapitalist": twitch[i].name = "Capitalist";
