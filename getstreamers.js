@@ -20,11 +20,10 @@ module.exports = function() {
 
 
   class Streamer {
-    constructor(name, rank, mmr, points, url, img, lang, card) {
+    constructor(name, rank, mmr, url, img, lang, card) {
       this.name = name;
       this.rank = rank;
       this.mmr = mmr;
-      this.points = points;
       this.url = url;
       this.img = img;
       this.lang = lang;
