@@ -31,9 +31,10 @@ I see the rank for a particular streamer is wrong. Why is that happening?
 
 ### A:
 
-There are two possibilities. One is that Dream Stream isn't using up to date JSON files. The app is scheduled to check the leaderboards every 5 minutes, and the pro circuit page every day.
-
-The other possibility is that sometimes popular or notable players have copycats. In those instances Dream Stream might use the copycat's rank. Unfortunately there isn't any obvious way to programmatically guard against that. If you think of a solution, please contact the author!
+Sometimes popular or notable players have copycats. In those instances Dream
+Stream might use the copycat's rank. Unfortunately there isn't any obvious way
+to programmatically guard against that. If you think of a solution, please
+contact the author!
 
 ### Q:
 
