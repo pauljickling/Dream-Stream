@@ -19,16 +19,9 @@ module.exports = function() {
 
 
   class Streamer {
-<<<<<<< HEAD
     constructor(name, rank, url, img, lang, card) {
       this.name = name;
       this.rank = rank;
-=======
-    constructor(name, rank, mmr, url, img, lang, card) {
-      this.name = name;
-      this.rank = rank;
-      this.mmr = mmr;
->>>>>>> cd55b966a3f903e28da0b3f1628771e5f3bbfd3b
       this.url = url;
       this.img = img;
       this.lang = lang;
