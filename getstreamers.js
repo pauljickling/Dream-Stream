@@ -4,7 +4,6 @@ module.exports = function() {
   const getJson = require('./getjson.js');
   const clientid = require('./clientid.js');
 
-  const points = require('./public/points.json');
   const americas = require('./public/americas.json');
   const china = require('./public/china.json');
   const europe = require('./public/europe.json');
@@ -20,11 +19,9 @@ module.exports = function() {
 
 
   class Streamer {
-    constructor(name, rank, mmr, points, url, img, lang, card) {
+    constructor(name, rank, url, img, lang, card) {
       this.name = name;
       this.rank = rank;
-      this.mmr = mmr;
-      this.points = points;
       this.url = url;
       this.img = img;
       this.lang = lang;
@@ -52,29 +49,13 @@ module.exports = function() {
     playerMap.set(streamers[i].name, i);
   }
 
-  function getPoints() {
-    for (let i=0; i < points.length; i++) {
-      if (playerMap.has(points[i].name) === true) {
-        streamers[playerMap.get(points[i].name)].points = points[i].points;
-      } else {
-        let streamer = new Streamer(points[i].name, 'unavilable', null, points[i].points);
-        streamers.push(streamer);
-        playerMap.set(points[i].name, streamers.length -1);
-      }
-    }
-  }
-
-  getPoints();
-
   let filteredPlayers = []; // when the streamer list is reduced it is pushed to this array
   let twitch = [];  // list from Twitch JSON request
   let cards = '';
+
   // Twitch API call
   request(login, function(error, response, body) {
     function filterList(arr) {
-      fs.writeFile('./public/test_twitch.json', JSON.stringify(arr), 'UTF-8', (err) => {
-        if (err) throw err;
-      });
       for (let i=0; i < arr.length; i++) {
         if (playerMap.has(arr[i].name) === true) {
           streamers[playerMap.get(arr[i].name)].url = arr[i].url;
@@ -87,13 +68,9 @@ module.exports = function() {
         if (filteredPlayers[p].rank === undefined) {
           filteredPlayers[p].rank = 0;
         }
-        if (filteredPlayers[p].points === undefined) {
-          filteredPlayers[p].points = 0;
-        }
         filteredPlayers[p].card = `<a href="${filteredPlayers[p].url}" class="${filteredPlayers[p].lang}"><div class="card"><img src="${filteredPlayers[p].img}" aria-label="logo for ${filteredPlayers[p].name}">
                                         <p><div class="player-title">${filteredPlayers[p].name}</div>
-                                        Rank <span class="rank">${filteredPlayers[p].rank}</span><br>
-                                        <span class="pointsRank">${filteredPlayers[p].points}</span> Qualifying Points</p>
+                                        Rank <span class="rank">${filteredPlayers[p].rank}</span></p>
                                         </div></a>\n`;
       }
       filteredPlayers.sort(function(a, b) {
@@ -123,7 +100,7 @@ module.exports = function() {
     if (!error && response.statusCode == 200) {
       let live = JSON.parse(body);
       for (let i=0; i < live.streams.length; i++) {
-        let stream = new Streamer(live.streams[i].channel.display_name, null, null, null, live.streams[i].channel.url, live.streams[i].channel.logo, live.streams[i].channel.broadcaster_language);
+        let stream = new Streamer(live.streams[i].channel.display_name, null, live.streams[i].channel.url, live.streams[i].channel.logo, live.streams[i].channel.broadcaster_language);
         twitch.push(stream);
       }
       nameSwitch();
