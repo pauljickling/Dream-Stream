@@ -21,9 +21,7 @@ but when I look at Dream Stream the stream isn't listed. What gives?
 
 If they have been playing exclusively, or nearly exclusively, on a smurf or alt
 account then they have not met the necessary conditions to appear on the DOTA 2
-leaderboards. See http://www.dota2.com/leaderboards for more details. That being
-said, now that Dream Stream tracks Qualifying Points this should not occur for
-any professional player that has achieved significant tournament results.
+leaderboards. See http://www.dota2.com/leaderboards for more details.
 
 ### Q:
 

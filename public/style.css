@@ -78,30 +78,11 @@ cursor: pointer;
 #cards.container {
   border-bottom: 5px solid #32566e;
 }
-#header-container {
-  margin-left: 10%;
-}
-.navbar {
-  list-style: none;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  background-color: #32566e;
-  display: none;
-}
-
-li.nav-item:first-child {
-  margin-left: -40px;
-}
-
-.nav-item {
-  padding: 2px;
-  text-align: center;
-}
 
 .player-title {
   font-size: 1.2em;
 }
-#lower {
+#flex {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -116,19 +97,12 @@ li.nav-item:first-child {
 }
 
 @media screen and (min-width: 1080px) {
-  .navbar {
-    display: flex;
-  }
   .container {
     margin-left: 25%;
     margin-right: 25%;
     grid-gap: 40px;
   }
-  #header-container {
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-  #lower {
+  #flex {
     margin-left: minmax(300px, 75%);
     padding-top: 0px;
   }
