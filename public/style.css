@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   font-family: "Lato", sans-serif;
   font-size: 100%;
-  background-color: #102027;
+  background-color: #263238;
   color: #ffffff;
 }
 div#header-container {
@@ -42,31 +42,7 @@ p {
   text-align: left;
   line-height: 1.5;
 }
-.button {
-border: 0;
-background: #32566e;
-background: -webkit-gradient(linear, left top, left bottom, from(#2AA4DB), to(#32566e));
-background: -webkit-linear-gradient(top, #2AA4DB, #32566e);
-background: -moz-linear-gradient(top, #2AA4DB, #32566e);
-background: -ms-linear-gradient(top, #2AA4DB, #32566e);
-background: -o-linear-gradient(top, #2AA4DB, #32566e);
-padding: 10px 20px;
-font-family: "Lato", sans-serif;
-font-size: 1em;
-color: white;
-text-decoration: none;
-vertical-align: middle;
-cursor: pointer;
-}
-.button:hover {
-   border-top-color: #587385;
-   background: #587385;
-   color: #ccc;
-}
-.button:active {
-   border-top-color: #64a7d4;
-   background: #64a7d4;
-}
+
 .container {
   display: grid;
   margin-left: 10%;
@@ -74,14 +50,20 @@ cursor: pointer;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
+.wide-container {
+  background: #32566E;
+}
+div#header-wide {
+  margin-top: -20px;
+}
 #cards {
   margin-top: 40px;
   padding-bottom: 40px;
 }
+/*
 #cards.container {
   border-bottom: 5px solid #32566e;
-}
-
+}*/
 .player-title {
   font-size: 1.2em;
 }
