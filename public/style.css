@@ -17,6 +17,9 @@ body {
   background-color: #102027;
   color: #ffffff;
 }
+div#header-container {
+  margin-left: 10%;
+}
 h2 {
   font-size: 1.5em;
 }
@@ -101,6 +104,10 @@ cursor: pointer;
     margin-left: 25%;
     margin-right: 25%;
     grid-gap: 40px;
+  }
+  div#header-container {
+    margin-left: 25%;
+    margin-right: 25%;
   }
   #flex {
     margin-left: minmax(300px, 75%);
