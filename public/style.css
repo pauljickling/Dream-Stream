@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   font-family: "Lato", sans-serif;
   font-size: 100%;
-  background-color: #263238;
+  background: #00253a;
   color: #ffffff;
 }
 div#header-container {
@@ -22,11 +22,19 @@ div#header-container {
 }
 h2 {
   font-size: 1.5em;
+  padding-top: 20px;
 }
 img {
   max-width: 75%;
   height: auto;
   border: 1px solid #d3d3d3;
+}
+img#baby-roshan {
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+  float: left;
+  border: none;
 }
 img#github-logo {
   max-width: 100%;
@@ -51,7 +59,8 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .wide-container {
-  background: #32566E;
+  background: #014d64;
+  min-height: 50px;
 }
 div#header-wide {
   margin-top: -20px;
