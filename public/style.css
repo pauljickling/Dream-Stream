@@ -10,6 +10,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
+a.underline {
+  text-decoration: underline;
+}
 body {
   margin: 0 auto;
   font-family: "Lato", sans-serif;
