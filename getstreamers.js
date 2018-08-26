@@ -203,6 +203,8 @@ module.exports = function() {
         break;
         case "Sovereigndota": twitch[i].name = "Sovereign";
         break;
+        case "topsonous": twitch[i].name = "Topson";
+        break;
         case "universedota": twitch[i].name = "Universe";
         break;
         case "vanNDota": twitch[i].name = "vanN";
