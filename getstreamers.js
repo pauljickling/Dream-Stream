@@ -19,9 +19,10 @@ module.exports = function() {
 
 
   class Streamer {
-    constructor(name, rank, url, img, lang, card) {
+    constructor(name, rank, region, url, img, lang, card) {
       this.name = name;
       this.rank = rank;
+      this.region = region;
       this.url = url;
       this.img = img;
       this.lang = lang;
@@ -31,17 +32,17 @@ module.exports = function() {
 
   let streamers = []; // list of top tier players
 
-  function getRegion(region) {
+  function getRegion(region, regionName) {
     for (let i=0; i < region.leaderboard.length; i++) {
-      let streamer = new Streamer(region.leaderboard[i].name, i+1, region.leaderboard[i].solo_mmr);
+      let streamer = new Streamer(region.leaderboard[i].name, i+1, region);
       streamers.push(streamer);
       }
     }
 
-  getRegion(americas);
-  getRegion(china);
-  getRegion(europe);
-  getRegion(se_asia);
+  getRegion(americas, 'Americas');
+  getRegion(china, 'China');
+  getRegion(europe, 'Europe');
+  getRegion(se_asia, 'Southeast Asia');
 
   let playerMap = new Map(); // player map where the value is the index of the players
 
@@ -68,10 +69,15 @@ module.exports = function() {
         if (filteredPlayers[p].rank === undefined) {
           filteredPlayers[p].rank = 0;
         }
-        filteredPlayers[p].card = `<a href="${filteredPlayers[p].url}" class="${filteredPlayers[p].lang}"><div class="card"><img src="${filteredPlayers[p].img}" aria-label="logo for ${filteredPlayers[p].name}">
-                                        <p><div class="player-title">${filteredPlayers[p].name}</div>
-                                        Rank <span class="rank">${filteredPlayers[p].rank}</span></p>
-                                        </div></a>\n`;
+        filteredPlayers[p].card = `<a href="${filteredPlayers[p].url}" class="${filteredPlayers[p].lang}">
+                                    <div class="card"><img src="${filteredPlayers[p].img}" aria-label="logo for ${filteredPlayers[p].name}">
+                                      <p>
+                                        <div class="player-title">${filteredPlayers[p].name}</div>
+                                        <span class="rank">Rank ${filteredPlayers[p].rank}</span><br/>
+                                        <span class="region">Region: ${filteredPlayers[p].region}</span>
+                                      </p>
+                                    </div>
+                                  </a>\n`;
       }
       filteredPlayers.sort(function(a, b) {
         return (a.rank) - (b.rank);
@@ -100,7 +106,7 @@ module.exports = function() {
     if (!error && response.statusCode == 200) {
       let live = JSON.parse(body);
       for (let i=0; i < live.streams.length; i++) {
-        let stream = new Streamer(live.streams[i].channel.display_name, null, live.streams[i].channel.url, live.streams[i].channel.logo, live.streams[i].channel.broadcaster_language);
+        let stream = new Streamer(live.streams[i].channel.display_name, null, null, live.streams[i].channel.url, live.streams[i].channel.logo, live.streams[i].channel.broadcaster_language);
         twitch.push(stream);
       }
       nameSwitch();
