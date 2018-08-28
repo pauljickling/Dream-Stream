@@ -34,7 +34,7 @@ module.exports = function() {
 
   function getRegion(region, regionName) {
     for (let i=0; i < region.leaderboard.length; i++) {
-      let streamer = new Streamer(region.leaderboard[i].name, i+1, region);
+      let streamer = new Streamer(region.leaderboard[i].name, i+1, regionName);
       streamers.push(streamer);
       }
     }
