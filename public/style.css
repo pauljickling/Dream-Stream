@@ -22,10 +22,11 @@ body {
 }
 div#header-container {
   margin-left: 10%;
+  max-height: 50px;
 }
 h2 {
   font-size: 1.5em;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 img {
   max-width: 75%;
@@ -63,10 +64,11 @@ p {
 }
 .wide-container {
   background: #014d64;
-  min-height: 50px;
+  max-height: 50px;
 }
 div#header-wide {
-  margin-top: -20px;
+  margin-top: -25px;
+  padding-bottom: 5px;
 }
 #cards {
   margin-top: 40px;
