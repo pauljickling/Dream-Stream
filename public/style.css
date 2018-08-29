@@ -22,7 +22,6 @@ body {
 }
 div#header-container {
   margin-left: 10%;
-  max-height: 50px;
 }
 h2 {
   font-size: 1.5em;
@@ -68,6 +67,7 @@ p {
 div#header-wide {
   margin-top: -25px;
   padding-bottom: 5px;
+  max-height: 50px;
 }
 #cards {
   margin-top: 40px;
