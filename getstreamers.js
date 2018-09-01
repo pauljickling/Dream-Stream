@@ -187,6 +187,8 @@ module.exports = function() {
         break;
         case "Moonmeander": twitch[i].name = "MoonMayMays";
         break;
+        case "nooneboss": twitch[i].name = "No[o]ne-";
+        break;
         case "PurgeGamers": twitch[i].name = "Purge";
         break;
         case "peterpandam": twitch[i].name = "Peterpandam";
