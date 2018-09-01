@@ -175,7 +175,11 @@ module.exports = function() {
         break;
         case "inK_Dota": twitch[i].name = "@inKDota";
         break;
+        case "k13sz": twitch[i].name = "twitch.tv/k13sz";
+        break;
         case "lanarinho": twitch[i].name = "Larano";
+        break;
+        case "lizZardDota2": twitch[i].name = "lizzard";
         break;
         case "midone": twitch[i].name = "MidOne";
         break;
@@ -223,9 +227,7 @@ module.exports = function() {
         break;
         case "YapzOrdota": twitch[i].name = "YapzOr";
         break;
-        case "ZiftryDoto": twitch[i].name = "Ziftry";
-        break;
-        default: name = twitch[i].name;
+        case "y0nd.Alina": twitch[i].name = "y0nd";
         break;
       }
     }
