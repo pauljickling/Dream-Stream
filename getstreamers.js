@@ -135,6 +135,8 @@ module.exports = function() {
         break;
         case "BananaSlamJamma": twitch[i].name = "BSJ";
         break;
+        case "BigDaddy": twitch[i].name = "BigDaddyN0tail";
+        break;
         case "BlackDotATV": twitch[i].name = "Black^";
         break;
         case "BlitzDotA": twitch[i].name = "Blitz";
