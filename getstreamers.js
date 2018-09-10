@@ -199,8 +199,6 @@ module.exports = function() {
         break;
         case "peterpandam": twitch[i].name = "Peterpandam";
         break;
-        case "qSnake": twitch[i].name = " ุqSnake";
-        break;
         case "ramzesdoto": twitch[i].name = "RAMZES666";
         break;
         case "shuma4": twitch[i].name = "ShuMa";
