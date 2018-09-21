@@ -183,6 +183,8 @@ module.exports = function() {
         break;
         case "lizZardDota2": twitch[i].name = "lizzard";
         break;
+        case "MatthewDota": twitch[i].name = "Matthew~";
+        break;
         case "midone": twitch[i].name = "MidOne";
         break;
         case "Miracle_doto": twitch[i].name = "Miracle-";
