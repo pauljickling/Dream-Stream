@@ -121,6 +121,8 @@ module.exports = function() {
     for (let i=0; i < twitch.length; i++) {
       let name = twitch[i].name;
       switch(name) {
+        case "0Timado0": twitch[i].name = "Timado";
+        break;
         case "33dota": twitch[i].name = "33";
         break;
         case "7ckngMad": twitch[i].name = "7Mad-";
