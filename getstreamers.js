@@ -58,10 +58,11 @@ module.exports = function() {
   request(login, function(error, response, body) {
     function filterList(arr) {
       for (let i=0; i < arr.length; i++) {
+        let player = playerMap.get(arr[i].name);
         if (playerMap.has(arr[i].name) === true) {
-          streamers[playerMap.get(arr[i].name)].url = arr[i].url;
-          streamers[playerMap.get(arr[i].name)].img = arr[i].img;
-          streamers[playerMap.get(arr[i].name)].lang = arr[i].lang;
+          streamers[player].url = arr[i].url;
+          streamers[player].img = arr[i].img;
+          streamers[player].lang = arr[i].lang;
         }
       }
       reduceList(streamers);
