@@ -35,7 +35,7 @@ h2 {
   padding-top: 15px;
 }
 img {
-  max-width: 75%;
+  max-width: 50%;
   height: auto;
   border: 1px solid #d3d3d3;
 }
@@ -102,6 +102,9 @@ div#header-wide {
     margin-left: 25%;
     margin-right: 25%;
     grid-gap: 40px;
+  }
+  img {
+    max-width: 75%;
   }
   div#header-container {
     margin-left: 25%;
