@@ -47,7 +47,9 @@ module.exports = function() {
   let playerMap = new Map(); // player map where the value is the index of the players
 
   for (let i=0; i < streamers.length; i++) {
-    playerMap.set(streamers[i].name, i);
+    if (playerMap.has(streamers[i].name) === false) {
+      playerMap.set(streamers[i].name, i);
+    }
   }
 
   let filteredPlayers = []; // when the streamer list is reduced it is pushed to this array
