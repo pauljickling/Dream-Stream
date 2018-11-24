@@ -49,6 +49,10 @@ module.exports = function() {
   for (let i=0; i < streamers.length; i++) {
     if (playerMap.has(streamers[i].name) === false) {
       playerMap.set(streamers[i].name, i);
+    } else {
+      if (streamers[playerMap.get(streamers[i].name)].rank < streamers[i].rank) {
+        playerMap.set(streamers[i].name, i);
+      }
     }
   }
 
