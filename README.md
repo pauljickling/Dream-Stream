@@ -30,9 +30,7 @@ I see the rank for a particular streamer is wrong. Why is that happening?
 ### A:
 
 Sometimes popular or notable players have copycats. In those instances Dream
-Stream might use the copycat's rank. Unfortunately there isn't any obvious way
-to programmatically guard against that. If you think of a solution, please
-contact the author!
+Stream defaults to the highest rank value. The assumption that is made here is that the more well known player is the one with the highest rank, and that it is also most likely the individual that is streaming. However there are edge cases where these assumptions could be wrong. The decision made was that it is better to be right in 99% of instances as opposed to generally wrong because it couldn't handle the 1% of edge cases.
 
 ### Q:
 
