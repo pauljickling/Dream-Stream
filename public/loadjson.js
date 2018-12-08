@@ -7,7 +7,12 @@ function loadJson() {
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
       let data = JSON.parse(request.responseText);
-      streamers.innerHTML = data.text;
+      if (data.length === 0) {
+        streamers.innerHTML = "<p>No leaderboard players streaming right now :-(</p>";
+      } else {
+        streamers.innerHTML = data.text;
+        console.log(streamers.innerHTML);
+      }
     } else {
       console.log('Error! JSON GET Request failed.');
     }
