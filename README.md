@@ -46,6 +46,8 @@ the leaderboards following the change to a seasonal rank system. Please suggest
 a change to the nameSwitch function in the getstreamers.js file (it is the
 function at the end of the script), or contact the author so this can be corrected.
 
+If you make a pull request for updating the nameSwitch function please keep the request in alphabetical order in order to facilitate ease of maintenance.
+
 ## LICENSE
 
 Dream Stream is (c) 2016 Paul Jickling and made available under the MIT license
