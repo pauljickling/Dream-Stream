@@ -50,7 +50,7 @@ module.exports = function() {
     if (playerMap.has(streamers[i].name) === false) {
       playerMap.set(streamers[i].name, i);
     } else {
-      if (streamers[playerMap.get(streamers[i].name)].rank < streamers[i].rank) {
+      if (streamers[playerMap.get(streamers[i].name)].rank > streamers[i].rank) {
         playerMap.set(streamers[i].name, i);
       }
     }
