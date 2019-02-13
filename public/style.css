@@ -38,6 +38,7 @@ img {
   max-width: 50%;
   height: auto;
   border: 1px solid #d3d3d3;
+  border-radius: 4px;
 }
 img#baby-roshan {
   margin-right: 10px;
@@ -60,7 +61,9 @@ p {
   text-align: left;
   line-height: 1.5;
 }
-
+p#license {
+  font-size: .9em;
+}
 .container {
   display: grid;
   margin-left: 10%;
@@ -91,10 +94,18 @@ div#header-wide {
   margin-right: 10px;
   padding-top: 10px;
 }
-
-#about {
-  font-size: 1.2em;
-  text-decoration: underline;
+div.details-box {
+  margin-top: 20px;
+}
+details {
+  width: 75%;
+  cursor: pointer;
+}
+summary {
+  font-size: 1.1em;
+}
+div#license-box {
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 1080px) {
