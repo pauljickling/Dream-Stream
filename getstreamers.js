@@ -11,7 +11,7 @@ module.exports = function() {
 
   // twitch api login
   const login = {
-    url: 'https://api.twitch.tv/kraken/streams?limit=100&offset=0&game=DOTA+2',
+    url: 'https://api.twitch.tv/helix/streams?limit=100&offset=0&game=DOTA+2',
     headers: {
       "Client-ID": clientid.clientId
     }
@@ -111,8 +111,8 @@ module.exports = function() {
 
     if (!error && response.statusCode == 200) {
       let live = JSON.parse(body);
-      for (let i=0; i < live.streams.length; i++) {
-        let stream = new Streamer(live.streams[i].channel.display_name, null, null, live.streams[i].channel.url, live.streams[i].channel.logo, live.streams[i].channel.broadcaster_language);
+      for (let i=0; i < live.data.length; i++) {
+        let stream = new Streamer(live.data[i].user_name, null, null, `https://twitch.tv/${live.data[i].user_name}`, live.data[i].thumbnail_url, live.data[i].language);
         twitch.push(stream);
       }
       nameSwitch();
