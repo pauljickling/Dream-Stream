@@ -11,7 +11,7 @@
     "request": "^2.87.0"
   },
   "devDependencies": {
-    "minimist": ">=1.2.2"
+    "minimist": ">=1.2.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
